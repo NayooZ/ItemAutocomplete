@@ -61,7 +61,7 @@ end
 
 -- Returns whether the current client is WOTLK or not
 function export.IsWotlk()
-  return _G.WOW_PROJECT_ID == _G.WOW_PROJECT_WRATH_CLASSIC
+  return _G.WOW_PROJECT_ID == _G.WOW_PROJECT_CATACLYSM_CLASSIC
 end
 
 -- Returns whether the current client is Season of Mastery or not

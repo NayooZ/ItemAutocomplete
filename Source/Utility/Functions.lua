@@ -5,6 +5,12 @@ local utf8 = require 'Shared.UTF8'
 
 ------------------------------------------
 -- Constants
+local GetAddOnMetadata = C_AddOns and C_AddOns.GetAddOnMetadata or GetAddOnMetadata
+local GetNumAddOns = C_AddOns.GetNumAddOns or GetNumAddOns
+local IsAddOnLoaded = C_AddOns.IsAddOnLoaded or IsAddOnLoaded;
+local IsAddOnLoadOnDemand = C_AddOns.IsAddOnLoadOnDemand or IsAddOnLoadOnDemand;
+local GetAddOnInfo = C_AddOns.GetAddOnInfo or GetAddOnInfo
+local GetAddOnDependencies = C_AddOns.GetAddOnDependencies or GetAddOnDependencies
 ------------------------------------------
 
 local addonName = select(1, ...)
@@ -61,7 +67,7 @@ end
 
 -- Returns whether the current client is WOTLK or not
 function export.IsWotlk()
-  return _G.WOW_PROJECT_ID == _G.WOW_PROJECT_CATACLYSM_CLASSIC
+  return _G.WOW_PROJECT_ID == _G.WOW_PROJECT_MISTS_CLASSIC
 end
 
 -- Returns whether the current client is Season of Mastery or not

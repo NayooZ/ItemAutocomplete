@@ -1,7 +1,8 @@
-## Interface: 40400
+## Interface: 50500
 ## Title: Item Autocomplete
 ## Notes: Search and link items in the chat
 ## Author: Elliott Linder
+## Author: Nayo
 ## Version: 2.0.6
 ## SavedVariables: ItemAutocompleteDB
 ## X-ItemDatabaseVersion: 5

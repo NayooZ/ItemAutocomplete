@@ -8,7 +8,7 @@ local utf8 = require 'Shared.UTF8'
 local const = util.ReadOnly({
   -- See: https://tbc.wowhead.com/items?filter=151;1;187815
   itemIds = util.IsWotlk() and {
-    { 1, 78910 }, -- Defaults
+    { 1, 99436 }, -- Defaults
     { 122270 }, -- WoW Token (AH)
     { 122284 }, -- WoW Token
     { 172070 }, -- Customer Service Package
@@ -25,7 +25,7 @@ local const = util.ReadOnly({
     { 189419, 189421 }, -- Fire Resist Gear
     { 189426, 189427 }, -- Raid Consumables
     -- Season of Discovery
-    util.IsSod() and { 190179, 215370 } or nil,
+    util.IsSod() and { 190179, 217704 } or nil,
   },
   itemsQueriedPerUpdate = 50,
 })
@@ -60,7 +60,7 @@ end
 ------------------------------------------
 
 function ItemDatabase:AddItemById(itemId)
-  local itemName, itemLink = GetItemInfo(itemId)
+  local itemName, itemLink = C_Item.GetItemInfo(itemId)
 
   -- The item info may not yet exist, in that case it's received asynchronously
   -- from the server via the GET_ITEM_INFO_RECEIVED event.

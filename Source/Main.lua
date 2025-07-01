@@ -93,6 +93,7 @@ local configDefinition = {
       ['{'] = 'Curly bracket — {',
       ['['] = 'Square bracket — [',
       ['('] = 'Parenthesis — (',
+	  ['!'] = 'Exclamation — !',
     },
     style = 'dropdown',
     name = 'Item completion trigger',
